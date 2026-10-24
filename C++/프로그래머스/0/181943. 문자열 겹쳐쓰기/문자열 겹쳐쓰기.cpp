@@ -1,0 +1,17 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+string solution(string my_string, string overwrite_string, int s) {
+    string answer = "";
+    for (int i=0; i<size(my_string); i++) {
+        if (i < s || i > size(overwrite_string) + s - 1){
+            answer += my_string[i];
+        }
+        else {
+            answer += overwrite_string[i-s];
+        }
+    }
+    return answer;
+}
