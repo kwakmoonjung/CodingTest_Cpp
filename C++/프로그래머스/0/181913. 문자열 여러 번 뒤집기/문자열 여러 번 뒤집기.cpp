@@ -12,13 +12,6 @@ string solution(string my_string, vector<vector<int>> queries) {
         int end = queries[i][1];
         
         reverse(my_string.begin() + start, my_string.begin() + end + 1);
-        
-        // string prev = my_string.substr(start, len);
-        // cout << prev << endl;
-        
-        // for (int j = start; j < start + len/2; j++){
-        //     my_string[j] = my_string[j + len];
-        // }
     }
     return my_string;
 }
