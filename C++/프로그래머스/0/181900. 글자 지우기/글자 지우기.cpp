@@ -1,0 +1,14 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+string solution(string my_string, vector<int> indices) {
+    sort(indices.begin(), indices.end(), greater<int>());
+    
+    for (int i = 0; i < size(indices); i++) {
+        my_string.erase(my_string.begin() + indices[i]);
+    }
+    return my_string;
+}
